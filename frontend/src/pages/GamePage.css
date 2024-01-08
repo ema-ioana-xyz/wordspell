@@ -1,0 +1,14 @@
+.page {
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+img {
+    width: 15rem;
+}
