@@ -11,6 +11,8 @@ const GamePage = () => {
     const [imgUrl, setImgUrl] = useState<string>("");
     const [imgAlt, setImgAlt] = useState<string>("");
     const [successAudio] = useState(new Audio("/success.mp3"));
+    const [wordAudio, setWordAudio] = useState<HTMLAudioElement>();
+    const [syllableAudio, setSyllableAudio] = useState<{[key: string]: HTMLAudioElement}>();
     const apiRoot = "https://localhost:7091/api";
 
     // AI generated shuffler (uses Fisher-Yates / Knuth algorithm)
@@ -48,7 +50,16 @@ const GamePage = () => {
             setCorrectAnswer(syllables);
             setChoices(shuffle([...syllables]));
             setImgUrl(word.urlImagine);
-            setImgAlt("O imagine cu un " + word.cuvant.replace("-", ""));
+            const wordValue = word.cuvant.replaceAll("-", "");
+            setImgAlt("O imagine cu un " + wordValue);
+
+            setWordAudio(new Audio("/sounds/" + wordValue + ".m4a"));
+
+            const syllableAudio: {[key: string]: HTMLAudioElement} = {};
+            for (const syllable of syllables) {
+                syllableAudio[syllable] = new Audio("/sounds/" + syllable + ".m4a");
+            }
+            setSyllableAudio(syllableAudio);
         }
 
         handler().catch(console.error);
@@ -56,6 +67,9 @@ const GamePage = () => {
 
     const handleChoiceClick = (choiceIndex: number) => {
         const chosenSyllable = choices[choiceIndex];
+        if (syllableAudio) {
+            syllableAudio[chosenSyllable].play();
+        }
         const newChoices = [...choices];
         newChoices.splice(choiceIndex, 1);
         setChoices(newChoices);
@@ -67,6 +81,11 @@ const GamePage = () => {
 
     const handleAnswerUndo = (syllableIndex: number) => {
         const undoneSyllable = answer[syllableIndex];
+
+        if (syllableAudio) {
+            syllableAudio[undoneSyllable].play();
+        }
+
         const newAnswer = [...answer];
         newAnswer.splice(syllableIndex, 1);
         setAnswer(newAnswer);
@@ -82,18 +101,29 @@ const GamePage = () => {
                 return;
             }
         }
+        successAudio.volume = 0.1;
         successAudio.play();
         alert("Bravo! Ai reușit!");
+    }
+
+    const sayWord = () => {
+        console.log("Say word");
+        wordAudio.play();
     }
 
     return (
         <DndContext>
             <div className="page">
-                <div className="row">
+                <div className="col">
                     <Answer answer={answer} correctAnswer={correctAnswer} clickHandler={handleAnswerUndo}/>
-                    <img src={imgUrl} alt={imgAlt}/>
+                    <Choices choices={choices} clickHandler={handleChoiceClick}/>
                 </div>
-                <Choices choices={choices} clickHandler={handleChoiceClick}/>
+                <div className="col">
+                    <img src={imgUrl} alt={imgAlt} onClick={() => sayWord()}/>
+                    <div onClick={() => sayWord()}>
+                        <span className="speaker-icon" >📢</span>
+                    </div>
+                </div>
             </div>
         </DndContext>
     )

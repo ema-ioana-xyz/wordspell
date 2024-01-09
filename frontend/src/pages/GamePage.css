@@ -1,14 +1,22 @@
 .page {
     display: flex;
-    gap: 50px;
-    flex-direction: column;
+    justify-content: center;
+    gap: 150px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
-.row {
+.col {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
 img {
     width: 15rem;
+}
+
+.speaker-icon {
+    font-size: xxx-large;
 }
