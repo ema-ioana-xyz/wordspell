@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using WebApplication1.Models;
 
@@ -8,6 +9,7 @@ namespace WebApplication1.Controllers
     [Route("api/cuvinte")]
     public class CuvinteController : Controller
     {
+        [EnableCors]
         [HttpGet]
         public IActionResult GetCuvinte()
         {
