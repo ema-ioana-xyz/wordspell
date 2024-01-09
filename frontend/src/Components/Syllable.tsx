@@ -1,15 +1,16 @@
 import React from "react";
-import "./Letter.css";
+import "./Syllable.css";
 
-interface  LetterProps {
+interface  SyllableProps {
     value: string,
-    id: number
+    id: number,
+    clickHandler: (syllableIndex: number) => void
 }
 
-const Syllable = ({value, id}: LetterProps) =>  {
+const Syllable = ({value, id, clickHandler}: SyllableProps) =>  {
     return (
-        <div className="syllable-container">
-            <span className="syllable">{value}</span>
+        <div className="syllable-container" onClick={() => clickHandler(id)}>
+            <span className="syllable">{value} </span>
         </div>
     );
 }

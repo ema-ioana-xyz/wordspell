@@ -1,15 +1,33 @@
 import "./Choices.css";
 import SyllableSlot from "./SyllableSlot";
+import React from "react";
 
-const Answer = () => {
-    const letters = ["CA", "  ", "  ", "TI", "ȚĂ"];
+interface AnswerProps {
+    answer: string[],
+    correctAnswer: string[],
+    clickHandler: (index: number) => void
+}
+
+const Answer: React.FC<AnswerProps> = ({answer, correctAnswer, clickHandler}) => {
+    console.log(answer)
+
+    function isSyllableCorrect(index: number): boolean {
+        return correctAnswer[index] === answer[index];
+    }
 
     return (
         <div className="answer">
-            {letters.map( (letter, index) =>
+            {answer.map( (letter, index) =>
                 <>
-                    <SyllableSlot id={index} key={index} value={letter}/>
-                    {index + 1 !== letters.length ? <span className="dash">-</span> : <></>}
+                    <SyllableSlot
+                        id={index}
+                        key={crypto.randomUUID()}
+                        value={letter}
+                        clickHandler={clickHandler}
+                        isCorrect={isSyllableCorrect(index)
+                    }
+                    />
+                    {index + 1 !== answer.length ? <span className="dash">-</span> : <></>}
                 </>)
             }
         </div>

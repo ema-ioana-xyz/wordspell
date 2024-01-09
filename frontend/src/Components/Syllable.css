@@ -26,3 +26,11 @@
     width: 2em;
     height: 1em;
 }
+
+.correct {
+    background-color: lightgreen;
+}
+
+.wrong {
+    background-color: #f86b96;
+}
