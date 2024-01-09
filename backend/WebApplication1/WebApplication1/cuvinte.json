@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "cuvant": "ca-sa",
+    "urlSunet": "https://exemplu.com/sunet1.mp3",
+    "urlImagine": "https://assets.epuzzle.info/puzzle/120/769/original.jpg"
+  },
+  {
+    "id": 2,
+    "cuvant": "te-le-fon",
+    "urlSunet": "https://exemplu.com/sunet2.mp3",
+    "urlImagine": "https://www.jucariishop.ro/upload_files/products/Telefon-muzical-colorat-pentru-bebelusi-2.jpg"
+  },
+  {
+    "id": 3,
+    "cuvant": "ma-și-na",
+    "urlSunet": "https://exemplu.com/sunet3.mp3",
+    "urlImagine": "https://gomagcdn.ro/domains/karlatoys.ro/files/product/original/masina-electrica-copii-bmw-6gt-12-v-cu-radiotelecomanda-1504-7882.jpeg"
+
+  },
+  {
+    "id": 4,
+    "cuvant": "ba-lon",
+    "urlSunet": "https://exemplu.com/sunet3.mp3",
+    "urlImagine": "https://desenenisip.ro/4377-large_default/balon-latex-30-cm-rosu-inchis.jpg"
+
+  },
+  {
+    "id": 5,
+    "cuvant": "bar-că",
+    "urlSunet": "https://exemplu.com/sunet3.mp3",
+    "urlImagine": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRepyW4pbkJibk8G_79ox3hasb5jm6lx0Wck_BgJKp2uH18xHncaPFo-qWxwCEjl6XHCfY&usqp=CAU"
+
+  },
+  {
+    "id": 6,
+    "cuvant": "u-ni-corn",
+    "urlSunet": "https://exemplu.com/sunet3.mp3",
+    "urlImagine": "https://img.freepik.com/free-vector/adorable-pink-unicorn-with-stars_1308-146486.jpg"
+
+  },
+  {
+    "id": 7,
+    "cuvant": "șar-pe",
+    "urlSunet": "https://exemplu.com/sunet3.mp3",
+    "urlImagine": "https://cdn.pixabay.com/photo/2014/04/02/10/23/snake-303696_960_720.png"
+
+  },
+  {
+    "id": 8,
+    "cuvant": "pan-ta-loni",
+    "urlSunet": "https://exemplu.com/sunet3.mp3",
+    "urlImagine": "https://t4.ftcdn.net/jpg/01/66/94/33/360_F_166943307_0FQsbZzh9d9UcyKkRnBpNB1Ktr1HrJOi.jpg"
+
+  }
+]
