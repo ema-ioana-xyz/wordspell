@@ -1,16 +1,24 @@
 import Syllable from "./Syllable";
 import "./Choices.css";
+import React from "react";
 
-const Choices = () => {
-    const letters = ["RA", "CA"];
+interface ChoicesProps {
+    choices: string[],
+    clickHandler: (index: number) => void
+}
+
+const Choices: React.FC<ChoicesProps> = ({choices, clickHandler}) => {
+    console.log("Choices", choices);
 
     return (
         <div className="letter-choices">
-            {letters.map( (letter, index) =>
-                <>
-                    <Syllable id={index} key={index} value={letter}/>
-                </>
-                )
+            {choices.map( (letter, index) =>
+                <Syllable
+                    id={index}
+                    key={index}
+                    value={letter}
+                    clickHandler={clickHandler}
+                /> )
             }
         </div>
     );
