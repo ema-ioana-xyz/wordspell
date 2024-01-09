@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9cc4c51-3db8-4832-a647-1c6edcb2ef50" name="Changes" comment="Request word data from API">
+    <list default="true" id="f9cc4c51-3db8-4832-a647-1c6edcb2ef50" name="Changes" comment="Add audio for words and syllables">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/WebApplication1/WebApplication1/cuvinte.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/WebApplication1/WebApplication1/cuvinte.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/GamePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/GamePage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/GamePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/GamePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +44,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "backend-merge",
+    "git-widget-placeholder": "add-sounds",
     "last_opened_file_path": "/home/tewi/WebstormProjects/HCI-App/frontend/package.json",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -148,7 +144,23 @@
       <option name="project" value="LOCAL" />
       <updated>1704825774044</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add audio for words and syllables">
+      <option name="closed" value="true" />
+      <created>1704837657534</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1704837657534</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Add audio for words and syllables">
+      <option name="closed" value="true" />
+      <created>1704837673832</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1704837673832</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +187,7 @@
     <MESSAGE value="Add UI components" />
     <MESSAGE value="Add backend to repo" />
     <MESSAGE value="Request word data from API" />
-    <option name="LAST_COMMIT_MESSAGE" value="Request word data from API" />
+    <MESSAGE value="Add audio for words and syllables" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add audio for words and syllables" />
   </component>
 </project>
