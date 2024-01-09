@@ -3,6 +3,7 @@ import Answer from "../Components/Answer";
 import "./GamePage.css";
 import {DndContext} from "@dnd-kit/core";
 import {useEffect, useState} from "react";
+import { useNavigate, useParams } from "react-router-dom";
 
 const GamePage = () => {
     const [choices, setChoices] = useState<string[]>([]);
@@ -14,6 +15,8 @@ const GamePage = () => {
     const [wordAudio, setWordAudio] = useState<HTMLAudioElement>();
     const [syllableAudio, setSyllableAudio] = useState<{[key: string]: HTMLAudioElement}>();
     const apiRoot = "https://localhost:7091/api";
+    const navigation = useNavigate();
+    const { id } = useParams<{ id: string }>();
 
     // AI generated shuffler (uses Fisher-Yates / Knuth algorithm)
     function shuffle(array: string[]) { // Modifies array in place
@@ -45,7 +48,7 @@ const GamePage = () => {
             }
 
             // randomly select a word
-            const word = wordData[Math.floor(Math.random() * wordData.length)];
+            const word = wordData[id as unknown as number];
             const syllables = word.cuvant.split("-");
             setCorrectAnswer(syllables);
             setChoices(shuffle([...syllables]));
@@ -104,6 +107,7 @@ const GamePage = () => {
         successAudio.volume = 0.1;
         successAudio.play();
         alert("Bravo! Ai reușit!");
+        navigation("/");
     }
 
     const sayWord = () => {
