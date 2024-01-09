@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f9cc4c51-3db8-4832-a647-1c6edcb2ef50" name="Changes" comment="Request word data from API">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/WebApplication1/WebApplication1/cuvinte.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/WebApplication1/WebApplication1/cuvinte.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/GamePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/GamePage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/GamePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/GamePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704825427500</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Request word data from API">
+      <option name="closed" value="true" />
+      <created>1704825774044</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1704825774044</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
