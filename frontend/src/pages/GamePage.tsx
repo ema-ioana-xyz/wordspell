@@ -1,7 +1,6 @@
 import Choices from "../Components/Choices";
 import Answer from "../Components/Answer";
 import "./GamePage.css";
-import {DndContext} from "@dnd-kit/core";
 import {useEffect, useState} from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -116,20 +115,17 @@ const GamePage = () => {
     }
 
     return (
-        <DndContext>
             <div className="page">
-                <div className="col">
                     <Answer answer={answer} correctAnswer={correctAnswer} clickHandler={handleAnswerUndo}/>
-                    <Choices choices={choices} clickHandler={handleChoiceClick}/>
-                </div>
-                <div className="col">
-                    <img src={imgUrl} alt={imgAlt} onClick={() => sayWord()}/>
-                    <div onClick={() => sayWord()}>
-                        <span className="speaker-icon" >📢</span>
+                    <div className="center">
+                        <img src={imgUrl} alt={imgAlt} onClick={() => sayWord()}/>
                     </div>
-                </div>
+
+                    <Choices choices={choices} clickHandler={handleChoiceClick}/>
+                    <div className="center">
+                        <span className="speaker-icon" onClick={() => sayWord()}>📢</span>
+                    </div>
             </div>
-        </DndContext>
     )
 }
 

@@ -8,8 +8,8 @@
     justify-content: center;
     align-items: center;
     padding: 1em;
-    background-color: #747bff;
-    box-shadow: 8px 8px #AAAAAA;
+    background-color: #7FBCD2;
+    box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.2);
     border: solid 1px black;
     border-radius: 10px;
     height: 40px;
@@ -21,6 +21,8 @@
     align-items: center;
     padding: 1.5em;
     background-color: #DDD;
+    box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.2);
+    border: solid 1px black;
     border-radius: 10px;
     height: 1em;
 }

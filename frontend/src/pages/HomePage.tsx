@@ -34,7 +34,7 @@ const HomePage = () => {
 
     return (
         <div className="home-page">
-            <header><h1>Dyslexia APP</h1></header>
+            <header><h1>Word Game</h1></header>
             <main>
                 <LevelSelector levels={levels} currentLevel={currentLevel}  onLevelSelect={goToGamePage} wonLevels={completedLevels}/>
             </main>

@@ -3,22 +3,21 @@
 .level-selector {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    /*margin-top: 20px;*/
+    gap: 20px;
   }
   
   .level {
-    background-color: #eee;
+    background-color: #E1FFEE;
     border: 1px solid #ccc;
     border-radius: 8px;
-    padding: 10px;
-    margin: 0 5px;
     cursor: pointer;
     user-select: none;
     transition: background-color 0.3s;
   }
   
   .completed {
-    background-color: #5cb85c; /* Green color for completed levels */
+    background-color: #7fd29c; /* Green color for completed levels */
     color: #fff;
   }
   
