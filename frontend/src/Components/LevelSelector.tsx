@@ -14,7 +14,7 @@ const LevelSelector: React.FC<LevelSelectorProps> = ({levels, currentLevel, onLe
 
                 <button key={index}  
                         onClick={() => onLevelSelect(level.id-1)}
-                        className={wonLevels.includes(level.id) ? 'completed' : ''}
+                        className={wonLevels.includes(level.id) ? 'completed level' : 'level'}
                         >{level.id}</button>
             ))}
         </div>
